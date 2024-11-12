@@ -1,0 +1,6 @@
+<?php 
+
+extract($_POST);
+
+$res = (new Model() )->authenticate($username, $password) ?? [];
+echo json_encode($res);

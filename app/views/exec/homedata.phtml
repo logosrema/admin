@@ -1,0 +1,10 @@
+<?php 
+header('Content-Type: application/json');
+
+$page = isset($this->viewData['page']) ? (int)$this->viewData['page'] : 1;
+$limit = isset($this->viewData['limit']) ? (int)$this->viewData['limit'] : 20;
+$res = (new Model() )->getAllUsers($page, $limit) ?? [];
+//$cleanData = array_filter($res, fn($key) => is_string($key), ARRAY_FILTER_USE_KEY);
+echo json_encode( value: $res);
+
+

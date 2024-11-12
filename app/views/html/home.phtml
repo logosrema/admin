@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light" data-color-theme="Blue_Theme" data-layout="vertical" data-boxed-layout="full" data-card="shadow">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon icon-->
+  <!-- <link rel="shortcut icon" type="image/png" href="<?php echo BASE_URL; ?>assets/images/logos/favicon.png" /> -->
+
+  <!-- Core Css -->
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/styles.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/chrometab.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" />
+  <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://bootstrapdemos.adminmart.com/modernize/dist/assets/css/styles.css">
+
+
+  <title>Limvo Admin</title>
+
+  <style>
+    .chrome__tab {
+      /* width: 400px;
+        height: auto;
+        border: solid 2px #ccc; */
+      padding: 20px;
+      display: none;
+    }
+
+    .chromclass {
+      border-top: solid 3px red !important;
+    }
+
+    .chrome-tab-drag-handle {
+      cursor: pointer !important;
+    }
+
+    /* Custom Scrollbar for Webkit Browsers */
+    .scroll-sidebar::-webkit-scrollbar {
+      height: 1px;
+    }
+
+    .scroll-sidebar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 3px;
+    }
+
+    .scroll-sidebar::-webkit-scrollbar-thumb {
+      background-color: #DEE1E6;
+      border-radius: 2px;
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb:hover {
+      background-color: #ccc;
+    }
+
+    .tab-button:active,
+    .tab-button:focus {
+      color: blue;
+      /* Change this to your desired color */
+    }
+
+    .clicked {
+      color: blue;
+      /* Change this to your desired color */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="toast toast-onload align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body hstack align-items-start gap-6">
+      <i class="ti ti-alert-circle fs-6"></i>
+      <div>
+        <h5 class="text-white fs-3 mb-1">Welcome to Modernize</h5>
+        <h6 class="text-white fs-2 mb-0">Easy to costomize the Template!!!</h6>
+      </div>
+      <button type="button" class="btn-close btn-close-white fs-2 m-0 ms-auto shadow-none" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Preloader -->
+  <!-- <div class="preloader">
+    <img src="<?php echo BASE_URL; ?>assets/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+  </div> -->
+  <div id="main-wrapper">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar with-vertical">
+      <div><!-- ---------------------------------- -->
+        <!-- Start Vertical Layout Sidebar -->
+        <!-- ---------------------------------- -->
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="<?php echo BASE_URL; ?>main/index.html" class="text-nowrap logo-img">
+            <img src="<?php echo BASE_URL; ?>assets/images/logos/dark-logo.svg" class="dark-logo" alt="Logo-Dark" />
+            <!-- <img src="<?php echo BASE_URL; ?>assets/images/logos/light-logo.svg" class="light-logo" alt="Logo-light" /> -->
+          </a>
+          <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
+            <i class="ti ti-x"></i>
+          </a>
+        </div>
+
+        <hr>
+
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar>
+
+          <ul id="sidebarnav">
+
+            <li class="tab-button sidebar-item">
+              <a class="sidebar-linkS" id="get-url" aria-expanded="false">
+                <span>
+                  <i class='bx bxs-dashboard bx-spin bx-rotate-90'></i>
+                </span>
+                <span class="hide-menu">DASHBOARD</span>
+              </a>
+            </li>
+
+          </ul>
+
+
+
+          <section class="ftco-sections">
+            <div class="containers">
+              <div class="row">
+
+              </div>
+              <div class="row">
+                <div class="">
+                  <div id="accordion" class="myaccordion w-100">
+                    <div class="card">
+                      <div class="card-header p-0" id="headingOne" style="">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-2 px-  justify-content-between btn btn-links" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-briefcase"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">BUSINESS FLOW</h6>
+                            </div>
+                            <!-- <p class="mb-0 num"> 3</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link hover:bg-blue-50 hover:text-blue-600 d-flex justify-content-between align-items-center tab-button" value="Account">
+                                <span class="menuTitle">Account Transaction</span> <span class="menuContent" hidden>Account</span>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab" value="Account">
+                                <span class="menuTitle">Game Betting Statistics</span> <span class="menuContent" hidden>Game</span>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab" value="Account">
+                                <span class="menuTitle">Lottery Betting Records</span> <span class="menuContent" hidden>Lottery</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab" value="Account">
+                                <span class="menuTitle">Track Management</span> <span class="menuContent" hidden>Track</span>
+                              </a>
+                            </li>
+
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:24px">
+                      <div class="card-header p-0" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-cash"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">FINANCIAL MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">3</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab" value="Deposit">
+                                <span class="menuTitle">Deposit Record</span> <span class="menuContent" hidden>Track</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab" value="Withdrawal">
+                                <span class="menuTitle">Withdrawal Records</span> <span class="menuContent" hidden>Track</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab" value="Finance">
+                                <span class="menuTitle">Finance Fund Changes</span> <span class="menuContent" hidden>Track</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:49px">
+                      <div class="card-header p-0" id="headingThree">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-book"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">REPORT MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">1</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab">
+                                <span class="menuTitle">Win/Loss Report</span> <span class="menuContent" hidden>Winorloss</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="card" style="position: relative;bottom:72px">
+                      <div class="card-header p-0" id="headingFour">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-people"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">USER MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">2</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab">
+                                <span class="menuTitle">User List</span> <span class="menuContent" hidden>UserList</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab">
+                                <span class="menuTitle">User Logs</span> <span class="menuContent" hidden>UserLogs</span>
+                              </a>
+                            </li>
+
+
+
+
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:96px">
+                      <div class="card-header p-0" id="headingFive">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-trophy"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">PROMOTION MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">1</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab">
+                                <span class="menuTitle">Invitation & Referral Links</span> <span class="menuContent" hidden>Invitation</span>
+                              </a>
+                            </li>
+
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:120px">
+                      <div class="card-header p-0" id="headingSix">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-card"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">USER BANK MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">1</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab">
+                                <span class="menuTitle">Bank Card List</span> <span class="menuContent" hidden>Bank </span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:148px">
+                      <div class="card-header p-0" id="headingsSeven">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-person"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">AGENT MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">1</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseSeven" class="collapse" aria-labelledby="headingsSeven" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class=" sidebar-link  hover:text-blue-600 d-flex justify-content-between align-items-center showtab">
+                                <span class="menuTitle">Quota Settings</span> <span class="menuContent" hidden>Quota</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:177px">
+                      <div class="card-header p-0" id="headingsEight">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-gift"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">GAME MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">1</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseEight" class="collapse" aria-labelledby="headingsEight" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class="d-flex justify-content-between align-items-center">
+                                <p><span>01</span> iCloud</p>
+                                <span class="num">21</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="d-flex justify-content-between align-items-center">
+                                <p><span>02</span> Web Hosting</p>
+                                <span class="num">100</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="d-flex justify-content-between align-items-center">
+                                <p><span>03</span> FTP Server</p>
+                                <span class="num">8</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="d-flex justify-content-between align-items-center">
+                                <p><span>04</span> Dropbox</p>
+                                <span class="num">1</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="d-flex justify-content-between align-items-center">
+                                <p><span>05</span> Skyrdrive</p>
+                                <span class="num">10</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card" style="position: relative;bottom:200px">
+                      <div class="card-header p-0" id="headingsNine">
+                        <h2 class="mb-0">
+                          <button class="d-flex py-3 px- align-items-center justify-content-between btn btn-linkx collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <div class="heading d-flex align-items-center">
+                              <!-- <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="ion-ios-settings"></span>
+                              </div> -->
+                              <h6 class="mb-0 ml-2">SYSTEM MANAGEMENT</h6>
+                            </div>
+                            <!-- <p class="mb-0 num">1</p> -->
+                            <i class="fa" aria-hidden="true"></i>
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapseNine" class="collapse" aria-labelledby="headingsNine" data-parent="#accordion">
+                        <div class="card-body p-0">
+                          <ul>
+                            <li>
+                              <a href="#" class="d-flex justify-content-between align-items-center">
+                                <p><span>01</span> iCloud</p>
+                                <span class="num">21</span>
+                              </a>
+                            </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+        </nav>
+
+
+
+        <div class="fixed-profile p-2 mx-2 mb-5 bg-secondary-subtle rounded mt-5" style="position:relative;top:-40px">
+          <div class="hstack gap-3">
+            <div class="john-img">
+              <img src="<?php echo BASE_URL; ?>assets/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" alt="modernize-img" />
+            </div>
+            <div class="john-title">
+              <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
+              <span class="fs-2">Admin</span>
+            </div>
+            <button class="border-0 bg-transparent text-primary ms-auto" tabindex="0" type="button" aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
+            <i class='bx bx-power-off bx-flip-horizontal' style='color: #5d87ff; font-size: 30px;'></i>
+
+            </button>
+          </div>
+        </div>
+
+        <!-- ---------------------------------- -->
+        <!-- Start Vertical Layout Sidebar -->
+        <!-- ---------------------------------- -->
+      </div>
+    </aside>
+    <!--  Sidebar End  the display of the html pages-->
+    <div class="page-wrapper">
+
+
+
+
+      <div class="containe-fluid">
+
+        <div class="surface">
+          <div class="mock-browser">
+            <div class="chrome-tabs" style="--tab-content-margin: 9px">
+              <div class="chrome-tabs-content">
+                <div class="chrome-tab" active>
+                  <div class="chrome-tab-dividers"></div>
+                  <div class="chrome-tab-background">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <symbol id="chrome-tab-geometry-left" viewBox="0 0 214 36">
+                          <path
+                            d="M17 0h197v36H0v-2c4.5 0 9-3.5 9-8V8c0-4.5 3.5-8 8-8z" />
+                        </symbol>
+                        <symbol id="chrome-tab-geometry-right" viewBox="0 0 214 36">
+                          <use xlink:href="#chrome-tab-geometry-left" />
+                        </symbol>
+                        <clipPath id="crop">
+                          <rect class="mask" width="100%" height="100%" x="0" />
+                        </clipPath>
+                      </defs>
+                      <svg width="52%" height="100%">
+                        <use
+                          xlink:href="#chrome-tab-geometry-left"
+                          width="214"
+                          height="36"
+                          class="chrome-tab-geometry" />
+                      </svg>
+                      <g transform="scale(-1, 1)">
+                        <svg width="52%" height="100%" x="-100%" y="0">
+                          <use
+                            xlink:href="#chrome-tab-geometry-right"
+                            width="214"
+                            height="36"
+                            class="chrome-tab-geometry" />
+                        </svg>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="chrome-tab-content">
+                    <div
+                      class="chrome-tab-favicon"
+                      style="
+                    background-image: url('demo/images/google-favicon.ico');
+                  "></div>
+                    <div class="chrome-tab-title">Dashboard</div>
+                    <div class="chrome-tab-holder" hidden>home</div>
+                    <div class="chrome-tab-drag-handle chromclass"></div>
+                    <div class="chrome-tab-close" hidden></div>
+                  </div>
+                </div>
+              </div>
+              <div class="chrome-tabs-bottom-bar"></div>
+              <!-- Styles to prevent flash after JS initialization -->
+            </div>
+            <!-- <div class="chrome-tabs-optional-shadow-below-bottom-bar"></div> -->
+          </div>
+        </div>
+
+        <div class="rowr" style="padding:0px;overflow-x:hidden;">
+
+          <div class="chrome__tab home">
+            <?php include "tabs/home.php" ?>
+          </div>
+
+          <div class="chrome__tab Account">
+            <?php include "tabs/businessflow/modern.php" ?>
+          </div>
+
+        </div>
+
+      </div>
+      <script>
+        function handleColorTheme(e) {
+          document.documentElement.setAttribute("data-color-theme", e);
+        }
+      </script>
+
+    </div>
+    <div class="dark-transparent sidebartoggler"></div>
+    <script src="<?php echo BASE_URL; ?>assets/js/vendor.min.js"></script>
+    <!-- Import Js Files -->
+    <script src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script>
+    <script src="https://unpkg.com/draggabilly@2.2.0/dist/draggabilly.pkgd.min.js"></script>
+
+    <script src="<?php echo BASE_URL; ?>assets/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/app.init.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/theme.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/app.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/sidebarmenu.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/chrometab.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/chairman.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/pagination.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/home.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/main.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/popper.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/businessflow.js"></script>
+    <!-- solar icons -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/dashboard.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8dec1d1f4d174140","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.4","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+
+    <script>
+      // document.getElementById("refreshButton").addEventListener("click", function(event) {
+      //   event.preventDefault();
+
+      //   // Show the loader
+      //   document.getElementById("loader").style.display = "flex";
+
+      //   // Delay and then refresh the page
+      //   setTimeout(function() {
+      //     location.reload();
+      //   }, 500);
+      // });
+
+    // Dummy data for testing
+
+
+      $(() => {
+
+        $(document).on("click", ".tab-button", function(event) {
+          event.preventDefault(); // Prevent the default link action
+          $(".showtab").removeClass("clicked");
+          $(this).addClass("clicked");
+
+        });
+
+      });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
